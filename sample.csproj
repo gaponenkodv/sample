@@ -1,0 +1,183 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
+    <Content Remove="ClientApp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ClientApp\assets\plugins\bootstrap-material-datetimepicker\bower.json" />
+    <Content Include="ClientApp\assets\plugins\bootstrap-material-datetimepicker\package.json" />
+    <Content Include="ClientApp\assets\plugins\bootstrap-rtl-master\bower.json" />
+    <Content Include="ClientApp\assets\plugins\bootstrap-social\.bower.json" />
+    <Content Include="ClientApp\assets\plugins\bootstrap-social\bower.json" />
+    <Content Include="ClientApp\assets\plugins\bootstrap-table\bootstrap-test.json" />
+    <Content Include="ClientApp\assets\plugins\bootstrap-treeview-master\bower.json" />
+    <Content Include="ClientApp\assets\plugins\bootstrap-treeview-master\package.json" />
+    <Content Include="ClientApp\assets\plugins\chartist-plugin-tooltip-master\bower.json" />
+    <Content Include="ClientApp\assets\plugins\chartist-plugin-tooltip-master\package.json" />
+    <Content Include="ClientApp\assets\plugins\datatables-plugins\.bower.json" />
+    <Content Include="ClientApp\assets\plugins\datatables-responsive\.bower.json" />
+    <Content Include="ClientApp\assets\plugins\datatables-responsive\bower.json" />
+    <Content Include="ClientApp\assets\plugins\datatables\.bower.json" />
+    <Content Include="ClientApp\assets\plugins\datatables\bower.json" />
+    <Content Include="ClientApp\assets\plugins\dropify\package.json" />
+    <Content Include="ClientApp\assets\plugins\dropzone-master\bower.json" />
+    <Content Include="ClientApp\assets\plugins\dropzone-master\component.json" />
+    <Content Include="ClientApp\assets\plugins\dropzone-master\composer.json" />
+    <Content Include="ClientApp\assets\plugins\dropzone-master\package.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\an_hui_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\ao_men_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\bei_jing_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\china_city.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\china_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\chong_qing_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\fu_jian_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\gan_su_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\guang_dong_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\guang_xi_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\gui_zhou_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\hai_nan_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\hei_long_jiang_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\he_bei_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\he_nan_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\hu_bei_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\hu_nan_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\jiang_su_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\jiang_xi_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\ji_lin_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\liao_ning_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\nei_meng_gu_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\ning_xia_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\qing_hai_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\shang_hai_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\shan_dong_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\shan_xi_1_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\shan_xi_2_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\si_chuan_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\tai_wan_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\tian_jin_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\world_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\xiang_gang_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\xin_jiang_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\xi_zang_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\yun_nan_geo.json" />
+    <Content Include="ClientApp\assets\plugins\echarts\util\mapData\rawData\geoJson\zhe_jiang_geo.json" />
+    <Content Include="ClientApp\assets\plugins\flot.tooltip\.bower.json" />
+    <Content Include="ClientApp\assets\plugins\flot.tooltip\bower.json" />
+    <Content Include="ClientApp\assets\plugins\flot\.bower.json" />
+    <Content Include="ClientApp\assets\plugins\flot\component.json" />
+    <Content Include="ClientApp\assets\plugins\flot\examples\ajax\data-eu-gdp-growth-1.json" />
+    <Content Include="ClientApp\assets\plugins\flot\examples\ajax\data-eu-gdp-growth-2.json" />
+    <Content Include="ClientApp\assets\plugins\flot\examples\ajax\data-eu-gdp-growth-3.json" />
+    <Content Include="ClientApp\assets\plugins\flot\examples\ajax\data-eu-gdp-growth-4.json" />
+    <Content Include="ClientApp\assets\plugins\flot\examples\ajax\data-eu-gdp-growth-5.json" />
+    <Content Include="ClientApp\assets\plugins\flot\examples\ajax\data-eu-gdp-growth.json" />
+    <Content Include="ClientApp\assets\plugins\flot\examples\ajax\data-japan-gdp-growth.json" />
+    <Content Include="ClientApp\assets\plugins\flot\examples\ajax\data-usa-gdp-growth.json" />
+    <Content Include="ClientApp\assets\plugins\flot\flot.jquery.json" />
+    <Content Include="ClientApp\assets\plugins\flot\package.json" />
+    <Content Include="ClientApp\assets\plugins\holderjs\.bower.json" />
+    <Content Include="ClientApp\assets\plugins\holderjs\bower.json" />
+    <Content Include="ClientApp\assets\plugins\holderjs\composer.json" />
+    <Content Include="ClientApp\assets\plugins\holderjs\package.json" />
+    <Content Include="ClientApp\assets\plugins\jquery-asColorPicker-master\bower.json" />
+    <Content Include="ClientApp\assets\plugins\jquery-asColorPicker-master\package.json" />
+    <Content Include="ClientApp\assets\plugins\jquery-steps-master\bower.json" />
+    <Content Include="ClientApp\assets\plugins\jquery-steps-master\package.json" />
+    <Content Include="ClientApp\assets\plugins\jquery-steps-master\steps.jquery.json" />
+    <Content Include="ClientApp\assets\plugins\jquery-wizard-master\.csscomb.json" />
+    <Content Include="ClientApp\assets\plugins\jquery-wizard-master\.release.json" />
+    <Content Include="ClientApp\assets\plugins\jquery-wizard-master\.stylelintrc.json" />
+    <Content Include="ClientApp\assets\plugins\jquery-wizard-master\bower.json" />
+    <Content Include="ClientApp\assets\plugins\jquery-wizard-master\manifest.json" />
+    <Content Include="ClientApp\assets\plugins\jquery-wizard-master\package.json" />
+    <Content Include="ClientApp\assets\plugins\jqueryui\package.json" />
+    <Content Include="ClientApp\assets\plugins\jsgrid\bower.json" />
+    <Content Include="ClientApp\assets\plugins\jsgrid\package.json" />
+    <Content Include="ClientApp\assets\plugins\Magnific-Popup-master\bower.json" />
+    <Content Include="ClientApp\assets\plugins\Magnific-Popup-master\composer.json" />
+    <Content Include="ClientApp\assets\plugins\Magnific-Popup-master\magnific-popup.jquery.json" />
+    <Content Include="ClientApp\assets\plugins\Magnific-Popup-master\package.json" />
+    <Content Include="ClientApp\assets\plugins\mocha\.bower.json" />
+    <Content Include="ClientApp\assets\plugins\mocha\bower.json" />
+    <Content Include="ClientApp\assets\plugins\morrisjs\.bower.json" />
+    <Content Include="ClientApp\assets\plugins\morrisjs\bower.json" />
+    <Content Include="ClientApp\assets\plugins\morrisjs\bower.travis.json" />
+    <Content Include="ClientApp\assets\plugins\morrisjs\package.json" />
+    <Content Include="ClientApp\assets\plugins\raphael\.bower.json" />
+    <Content Include="ClientApp\assets\plugins\raphael\bower.json" />
+    <Content Include="ClientApp\assets\plugins\select2\bower.json" />
+    <Content Include="ClientApp\assets\plugins\select2\component.json" />
+    <Content Include="ClientApp\assets\plugins\select2\composer.json" />
+    <Content Include="ClientApp\assets\plugins\select2\docs\images\manifest.json" />
+    <Content Include="ClientApp\assets\plugins\select2\package.json" />
+    <Content Include="ClientApp\assets\plugins\select2\select2.jquery.json" />
+    <Content Include="ClientApp\assets\plugins\sidebar-nav\.bower.json" />
+    <Content Include="ClientApp\assets\plugins\sidebar-nav\bower.json" />
+    <Content Include="ClientApp\assets\plugins\sidebar-nav\package.json" />
+    <Content Include="ClientApp\assets\plugins\tablesaw-master\bower.json" />
+    <Content Include="ClientApp\assets\plugins\tablesaw-master\package.json" />
+    <Content Include="ClientApp\assets\plugins\typeahead.js-master\bower.json" />
+    <Content Include="ClientApp\assets\plugins\typeahead.js-master\composer.json" />
+    <Content Include="ClientApp\assets\plugins\typeahead.js-master\countries.json" />
+    <Content Include="ClientApp\assets\plugins\typeahead.js-master\nba.json" />
+    <Content Include="ClientApp\assets\plugins\typeahead.js-master\nfl.json" />
+    <Content Include="ClientApp\assets\plugins\typeahead.js-master\nhl.json" />
+    <Content Include="ClientApp\assets\plugins\typeahead.js-master\package.json" />
+    <Content Include="ClientApp\assets\plugins\typeahead.js-master\typeahead.js.jquery.json" />
+    <Content Include="ClientApp\styles\scss\icons\font-awesome\old\.bower.json" />
+    <Content Include="ClientApp\styles\scss\icons\font-awesome\old\bower.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ClientApp\assets\plugins\jquery-wizard-master\.github\ISSUE_TEMPLATE.md" />
+    <None Include="ClientApp\assets\plugins\jquery-wizard-master\.github\PULL_REQUEST_TEMPLATE.md" />
+  </ItemGroup>
+
+  <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+
+    <!-- In development, the dist files won't exist on the first run or when cloning to
+         a different machine, so rebuild them if not already present. -->
+    <Message Importance="high" Text="Performing first-run Webpack build..." />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec Command="npm install" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --env.prod" />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>
